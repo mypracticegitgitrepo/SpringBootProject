@@ -1,0 +1,22 @@
+spring:
+  profiles.active: development
+#server:
+#  port: 9000
+---
+spring:
+  profiles: development
+#server:
+#	port: 9001
+logging:
+  level:
+    org.springframework.web: DEBUG
+spring.data.mongodb:
+  database: test
+  uri: mongodb://127.0.0.1:27017
+management:
+  endpoints:
+    web:
+      base-path: /
+      path-mapping:
+        health: health
+
